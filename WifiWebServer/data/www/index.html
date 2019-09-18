@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sensor Logger Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--link rel='stylesheet' type='text/css' media='screen' href='main.css'-->
+
+</head>
+
+<body style="background-color: gray; text-align: center">
+
+    <h1 style="color: white">Sensor Logger Page</h1>
+    <h3>Data From Sensor Logger:</h3>
+    <textarea name="" id="txtArea" rows="50%" style="width: 90%"></textarea>
+
+
+    <script>
+
+        var txtArea = document.getElementById("txtArea");
+
+        window.onload = function () {
+            window.setInterval(loadTime, 750);
+        };
+
+        function loadTime() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var textData = this.responseText;                    
+                    console.log(textData);
+                    if(textData != ""){                        
+                        txtArea.value += textData;
+                        txtArea.scrollTop = txtArea.scrollHeight;
+                    }
+                }
+            };
+            xhttp.open("GET", "data", true);
+            xhttp.send();
+        }
+    </script>
+
+</body>
+
+</html>

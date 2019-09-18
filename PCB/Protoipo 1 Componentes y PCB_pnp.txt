@@ -1,0 +1,52 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=Protoipo 1 Componentes y PCB
+*Date=23:55:19
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;;40.5737;-25.0875;0;Bottom;IMG3
+2;;;17.6305;-72.3736;0;Bottom;TXT1
+3;;THT;72.235;-53.5426;0;Bottom;ADC3
+4;150;THT;64.615;-44.6526;180;Bottom;adcR2
+5;150;THT;64.615;-59.8926;180;Bottom;adcR4
+6;;THT;40.485;-34.4926;90;Bottom;Micro SD Header
+7;;;79.8549;-6.55272;0;Bottom;Hole4
+8;;;44.295;-72.5926;0;Bottom;JumperSCL
+9;;;41.755;-59.8926;0;Bottom;Arduino Pro Mini
+10;;THT;72.235;-38.3026;0;Bottom;ADC1
+11;;THT;62.075;-71.3226;0;Bottom;I2C-1
+12;;;39.215;-72.5926;0;Bottom;JumperSDA
+13;1k;THT;29.055;-34.4926;90;Bottom;SigS
+14;;;44.7002;-3.49418;0;Bottom;TXT2
+15;;TO220 [THT];61.059;-14.1726;90;Bottom;MosFetMotor
+16;;;79.8549;-80.2126;0;Bottom;Hole3
+17;;THT;69.695;-71.3226;0;Bottom;I2C-2
+18;;;80.372;-11.2276;0;Bottom;TXT3
+19;;THT;12.7251;-14.1917;180;Bottom;Power 12V
+20;;THT;15.085;-37.0326;90;Bottom;BuckConverter
+21;;THT;73.3249;-14.1536;0;Bottom;Motor
+22;;THT;16.355;-47.1926;90;Bottom;GPS 7M Header
+23;;;6.19496;-80.2126;0;Bottom;Hole1
+24;1k;THT;26.515;-34.4926;90;Bottom;SigM
+25;;;80.595;-23.8924;0;Bottom;TXT3
+26;;THT;73.3249;-26.8536;0;Bottom;LoadSensor
+27;150;THT;64.615;-52.2726;180;Bottom;adcR3
+28;150;THT;64.615;-37.0326;180;Bottom;adcR1
+29;;THT;72.235;-61.1626;0;Bottom;ADC4
+30;;;16.1367;-57.7988;0;Bottom;IMG1
+31;10k;THT;54.455;-14.1726;-90;Bottom;R1-PullDown
+32;;;14.959;-29.8144;0;Bottom;IMG2
+33;;THT;72.235;-45.9226;0;Bottom;ADC2
+34;10k;THT;54.455;-26.8726;90;Bottom;R2-PullDown
+35;;;13.191;-16.4146;0;Bottom;TXT3
+36;;;6.19496;-6.55272;0;Bottom;Hole2
+37;;TO220 [THT];61.059;-26.8726;90;Bottom;MosfetSensor
