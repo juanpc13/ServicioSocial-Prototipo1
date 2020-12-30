@@ -15,12 +15,10 @@ int readCo2A() {
 }
 
 void ReadAllData() {
-  if (pressure.getPressure(presion, temperatura) == 0) {
-    Serial.println(F("BMP180 Error"));
-  }
-
-  temperatura = hdc1080.readTemperature();
-  humedad = hdc1080.readHumidity();
+  presion = mySensor.readFloatPressure();
+  temperatura = mySensor.readTempC();
+  
+  humedad = sensor.getRH();
 
   co2A = readCo2A();
   co2A += readCo2A();

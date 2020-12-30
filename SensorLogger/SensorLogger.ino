@@ -4,8 +4,7 @@
 #include "gpsEventLoop.h"
 #include "motor.h"
 
-void setup() {
-  Serial.begin(9600);
+void setup() {  
   callSetup();
 }
 

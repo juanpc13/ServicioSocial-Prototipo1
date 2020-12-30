@@ -1,17 +1,11 @@
 void callSetup() {
+  Serial.begin(9600);
   Serial.print(F("GPS NEO..............."));
   gpsPort.begin(9600);
   Serial.println(F("Ok"));
 
   Serial.print(F("MicroSD..............."));
   if (!SD.begin(chipSelect)) {
-    Serial.println(F("Fail"));
-    while (1);
-  }
-  Serial.println(F("Ok"));
-
-  Serial.print(F("BMP180................"));
-  if (!pressure.begin()) {
     Serial.println(F("Fail"));
     while (1);
   }
@@ -25,8 +19,19 @@ void callSetup() {
   while (!ccs.available());   //Calibrar
   Serial.println(F("Ok"));
 
-  Serial.print("ClosedCube HDC1080....");
-  hdc1080.begin(0x40);
+  // Init Sensor de temperatura y humedad y presion
+  Serial.print(F("BMP280 Sensor........."));
+  mySensor.setI2CAddress(0x76);
+  if(mySensor.beginI2C() == false){
+    Serial.println(F("Fail"));
+    while (1);
+  }
+  Serial.println(F("Ok"));
+
+  // Init Sensor de temperatura y humedad y presion
+  Serial.print(F("Si7021 Sensor........."));
+  sensor.begin();  
+  sensor.heaterOff();
   Serial.println(F("Ok"));
 
   Serial.print(F("Motor................."));
